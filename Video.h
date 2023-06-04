@@ -20,10 +20,19 @@ class Video{
 
 
     public:
-        Video(int ID, string nombre, string genero, int calificacion,
+        Video(int id, string nombre, string genero, int calificacion,
         int duracion, string fechaEstreno);
         void displayVideos();
 
+        int getID();
+        string getNombre();
+        string getGenero();
+        int getCalificacion();
+        int getDuracion();
+        string getfechaEstreno();
+
+        virtual void mostrarInfo()=0;
+        
 
 
 

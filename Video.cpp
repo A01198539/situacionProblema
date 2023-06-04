@@ -1,38 +1,39 @@
 #include "Video.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
 
-using std::cout;
-using std::string;
-using std::endl;
-using std::ifstream;
-using std::stringstream;
-
-Video::Video(int ID, string nombre, string genero, int calificacion,
-        int duracion, string fechaEstreno)
-{
-    ifstream videos;
-    videos.open("DatosPeliculas.csv");
-    string linea;
-    string Id;
-    string nombre;
-    string genero;
-    string calificacion;
-    string duracion;
-    string fechaEstreno;
-
-    while (getline(videos,linea)){
-        stringstream token(linea);
-        getline(token,Id,',');
-        getline(token,nombre,',');
-        getline(token,genero,',');
-        
+Video::Video(int id, string nombre, string genero, int calificacion,
+        int duracion, string fechaEstreno):ID(id),nombre(nombre),genero(genero),
+        calificacion(calificacion),duracion(duracion),fechaEstreno(fechaEstreno)
+    
+    {
 
     }
 
-}
+    int Video::getID()
+    {
+        return ID;
+    }
 
-void Video::displayVideos()
-{
-}
+    string Video::getNombre()
+    {
+        return nombre;
+    }
+
+    string Video::getGenero()
+    {
+        return genero;
+    }
+
+    int Video::getCalificacion()
+    {
+        return calificacion;
+    }
+
+    int Video::getDuracion()
+    {
+        return duracion;
+    }
+
+    string Video::getfechaEstreno()
+    {
+        return fechaEstreno;
+    }
