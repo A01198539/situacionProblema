@@ -11,8 +11,8 @@ class Pelicula : public Video{
 
     public:
 
-        Pelicula(int id, string nombre, string genero, int calificacion,
-        int duracion, string fechaEstreno);
+        Pelicula(int id, string nombre,int duracion, string genero, int calificacion,
+         string fechaEstreno);
 
         void mostrarInfo();
         bool esEpisodio();

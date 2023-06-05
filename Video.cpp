@@ -1,8 +1,8 @@
 #include "Video.h"
 
-Video::Video(int id, string nombre, string genero, int calificacion,
-        int duracion, string fechaEstreno):ID(id),nombre(nombre),genero(genero),
-        calificacion(calificacion),duracion(duracion),fechaEstreno(fechaEstreno)
+Video::Video(int id, string nombre,int duracion,string genero, int calificacion,
+         string fechaEstreno):ID(id),nombre(nombre),duracion(duracion),genero(genero),
+        calificacion(calificacion),fechaEstreno(fechaEstreno)
     
     {
 
