@@ -20,8 +20,8 @@ class Video{
 
 
     public:
-        Video(int id, string nombre, string genero, int calificacion,
-        int duracion, string fechaEstreno);
+        Video(int id, string nombre,int duracion, string genero, int calificacion,
+         string fechaEstreno);
 
         int getID();
         string getNombre();

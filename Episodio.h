@@ -19,7 +19,7 @@ class Episodio: public Video{
             string fechaEstreno,int idEpisodio,string nombreEpisodio,int temporada,
             int numeroEpisodio);
 
-        void mostrarInformacion();
+        void mostrarInfo();
         bool esEpisodio();
         int getidEpisodio();
         string getnombreEpisodio();

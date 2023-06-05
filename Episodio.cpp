@@ -10,7 +10,7 @@ nombreEpisodio(nombreEpisodio),temporada(temporada),numeroEpisodio(numeroEpisodi
 {
 }
 
-void Episodio::mostrarInformacion()
+void Episodio::mostrarInfo()
 {
      std::cout << "ID: " << getID() << std::endl;
     std::cout << "Nombre: " << getNombre() << std::endl;
