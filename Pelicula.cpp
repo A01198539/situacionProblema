@@ -1,11 +1,17 @@
 #include "Pelicula.h"
 #include <iostream>
 
-Pelicula::Pelicula(int id, string nombre,int duracion, string genero, 
-int calificacion,  string fechaEstreno)
-:Video(id,nombre,duracion,genero,calificacion,fechaEstreno)
+Pelicula::Pelicula()
 {
 }
+
+Pelicula::Pelicula(int id, string nombre, int duracion, string genero,
+                   int calificacion, string fechaEstreno)
+    : Video(id, nombre, duracion, genero, calificacion, fechaEstreno)
+{
+}
+
+
 
 void Pelicula::mostrarInfo()
 {
@@ -17,7 +23,21 @@ void Pelicula::mostrarInfo()
     std::cout << "Fecha de estreno: " << getfechaEstreno() << std::endl;
 }
 
-bool Pelicula::esEpisodio()
+void Pelicula::mostrarPeliculasporCalificacion(vector<Video *> videos, double calificacionMinima)
 {
-    return false;
+    std::cout << "PELÍCULAS CON CALIFICACIÓN MAYOR O IGUAL A " << calificacionMinima << ":" << std::endl;
+    bool encontradas = false;
+
+    for (const auto& video : videos) {
+        if (dynamic_cast<const Pelicula*>(video) && video->getCalificacion() >= calificacionMinima) {
+            video->mostrarInfo();
+            std::cout << std::endl;
+            encontradas = true;
+        }
+    }
+
+    if (!encontradas) {
+        std::cout << "No se encontraron películas con esa calificación." << std::endl;
+    }
 }
+

@@ -20,7 +20,9 @@ class Video{
 
 
     public:
-        Video(int id, string nombre,int duracion, string genero, int calificacion,
+
+        Video();
+        Video(int id, string nombre,int duracion, string genero, double calificacion,
          string fechaEstreno);
 
         int getID();
@@ -31,9 +33,6 @@ class Video{
         string getfechaEstreno();
 
         virtual void mostrarInfo()=0;
-        virtual bool esEpisodio()=0;
-
-
 
 
 

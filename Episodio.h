@@ -15,7 +15,7 @@ class Episodio: public Video{
 
     public:
 
-        Episodio(int id, string nombre,int duracion, string genero, int calificacion,
+        Episodio(int id, string nombre,int duracion, string genero, double calificacion,
             string fechaEstreno,int idEpisodio,string nombreEpisodio,int temporada,
             int numeroEpisodio);
 

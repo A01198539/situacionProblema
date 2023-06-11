@@ -1,39 +1,51 @@
 #include "Video.h"
+#include <iostream>
+using namespace std;
 
-Video::Video(int id, string nombre,int duracion,string genero, int calificacion,
-         string fechaEstreno):ID(id),nombre(nombre),duracion(duracion),genero(genero),
-        calificacion(calificacion),fechaEstreno(fechaEstreno)
-    
-    {
+#include<fstream>
+#include <sstream> //Flujo de datos en una cadena 
+#include <vector>
 
-    }
+Video::Video()
+{
+}
 
-    int Video::getID()
-    {
-        return ID;
-    }
+Video::Video(int id, string nombre, int duracion, string genero, double calificacion,
+             string fechaEstreno) : ID(id), nombre(nombre), duracion(duracion), genero(genero),
+                                    calificacion(calificacion), fechaEstreno(fechaEstreno)
+{
 
-    string Video::getNombre()
-    {
-        return nombre;
-    }
+}
 
-    string Video::getGenero()
-    {
-        return genero;
-    }
 
-    int Video::getCalificacion()
-    {
-        return calificacion;
-    }
+int Video::getID()
+{
+  return ID;
+}
 
-    int Video::getDuracion()
-    {
-        return duracion;
-    }
+string Video::getNombre()
+{
+    return nombre;
+}
 
-    string Video::getfechaEstreno()
-    {
-        return fechaEstreno;
-    }
+string Video::getGenero()
+{
+    return genero;
+}
+
+int Video::getCalificacion()
+{
+    return calificacion;
+}
+
+int Video::getDuracion()
+{
+    return duracion;
+}
+
+string Video::getfechaEstreno()
+{
+    return fechaEstreno;
+}
+
+

@@ -3,7 +3,7 @@
 using namespace std;
 
 Episodio::Episodio(int id, string nombre, int duracion, string genero, 
-int calificacion, string fechaEstreno, int idEpisodio, string nombreEpisodio, 
+double calificacion, string fechaEstreno, int idEpisodio, string nombreEpisodio, 
 int temporada, int numeroEpisodio): Video(id,nombre,duracion,
 genero,calificacion,fechaEstreno),idEpisodio(idEpisodio),
 nombreEpisodio(nombreEpisodio),temporada(temporada),numeroEpisodio(numeroEpisodio)
