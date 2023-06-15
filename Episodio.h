@@ -1,30 +1,32 @@
 #ifndef EPISODIO_H
 #define EPISODIO_H
 #include "Video.h"
+#include <string>
 
-
+using namespace std;
 
 class Episodio: public Video{
 
     private:
-        int idEpisodio;
+        string idEpisodio;
         string nombreEpisodio;
         int temporada;
-        int numeroEpisodio;
+        double numeroEpisodio;
 
 
     public:
 
-        Episodio(int id, string nombre,int duracion, string genero, double calificacion,
-            string fechaEstreno,int idEpisodio,string nombreEpisodio,int temporada,
-            int numeroEpisodio);
+        Episodio();
+        Episodio(string id, string nombre,int duracion, string genero, double calificacion,
+            string fechaEstreno,string idEpisodio,string nombreEpisodio,int temporada,
+            double numeroEpisodio);
 
         void mostrarInfo();
         bool esEpisodio();
-        int getidEpisodio();
+        string getidEpisodio();
         string getnombreEpisodio();
         int getTemporada();
-        int getnumeroEpisodio();
+        double getnumeroEpisodio();
 
 
 

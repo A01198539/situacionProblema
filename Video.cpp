@@ -10,7 +10,7 @@ Video::Video()
 {
 }
 
-Video::Video(int id, string nombre, int duracion, string genero, double calificacion,
+Video::Video(string id, string nombre, int duracion, string genero, double calificacion,
              string fechaEstreno) : ID(id), nombre(nombre), duracion(duracion), genero(genero),
                                     calificacion(calificacion), fechaEstreno(fechaEstreno)
 {
@@ -18,7 +18,7 @@ Video::Video(int id, string nombre, int duracion, string genero, double califica
 }
 
 
-int Video::getID()
+string Video::getID()
 {
   return ID;
 }
@@ -33,7 +33,7 @@ string Video::getGenero()
     return genero;
 }
 
-int Video::getCalificacion()
+double Video::getCalificacion()
 {
     return calificacion;
 }

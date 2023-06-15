@@ -5,14 +5,16 @@ Autor: Sebatsian Peñafiel A01198539
 #define VIDEO_H
 
 #include <string>
+#include <vector>
+
 using namespace std;
 
-class Video{
+class Video {
     protected:
-        int ID;
+        string ID;
         string nombre;
         string genero;
-        int calificacion;
+        double calificacion;
         int duracion;
         string fechaEstreno;
 
@@ -22,19 +24,20 @@ class Video{
     public:
 
         Video();
-        Video(int id, string nombre,int duracion, string genero, double calificacion,
+        Video(string id, string nombre,int duracion, string genero, double calificacion,
          string fechaEstreno);
 
-        int getID();
+        string getID();
         string getNombre();
         string getGenero();
-        int getCalificacion();
+        double getCalificacion();
         int getDuracion();
         string getfechaEstreno();
 
         virtual void mostrarInfo()=0;
+        
 
 
 
 };
-#endif 
+#endif

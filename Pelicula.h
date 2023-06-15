@@ -2,10 +2,11 @@
 #define PELICULA_H
 
 #include "Video.h"
-#include "lectorArchivos.h"
+#include <vector>
 
 
-class Pelicula : public Video{
+
+class Pelicula : public Video {
 
     private:
 
@@ -15,10 +16,9 @@ class Pelicula : public Video{
     public:
 
         Pelicula();
-        Pelicula(int id, string nombre,int duracion, string genero, int calificacion,
-         string fechaEstreno);
-
-        void mostrarPeliculasporCalificacion(vector<Video*>videos,double calificacionMinima);
+        Pelicula(string id, string nombre,int duracion, string genero, double calificacion,
+        string fechaEstreno);
+        void mostrarPeliculasporCalificacion(vector<Video *> videos, double calificacionMinima);
 
         void mostrarInfo();
 

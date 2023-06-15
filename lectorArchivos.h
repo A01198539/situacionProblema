@@ -4,8 +4,6 @@
 #include <vector>
 #include <string>
 #include "Video.h"
-#include "Episodio.h"
-#include "Pelicula.h"
 
 class LectorArchivos{
 

@@ -5,8 +5,8 @@ Pelicula::Pelicula()
 {
 }
 
-Pelicula::Pelicula(int id, string nombre, int duracion, string genero,
-                   int calificacion, string fechaEstreno)
+Pelicula::Pelicula(string id, string nombre, int duracion, string genero,
+                   double calificacion, string fechaEstreno)
     : Video(id, nombre, duracion, genero, calificacion, fechaEstreno)
 {
 }
@@ -40,4 +40,3 @@ void Pelicula::mostrarPeliculasporCalificacion(vector<Video *> videos, double ca
         std::cout << "No se encontraron películas con esa calificación." << std::endl;
     }
 }
-
