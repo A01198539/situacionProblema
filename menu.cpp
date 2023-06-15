@@ -39,12 +39,15 @@ void Menu::cargarDatos(const std::vector<Video*>& videos)
     //std::vector<Video*> videos = lector.cargarVideosDesdeArchivo("DatosPeliculas.csv");
 }
 
+
+
+
 void Menu::videosGenCalificacionGenero(const std::vector<Video*>& videos)
 {
     double calificacionMinima;
     std::cout << "Ingrese la calificación mínima: ";
     std::cin >> calificacionMinima;
-    //mostrarVideosPorCalificacion(videos, calificacionMinima);
+    std::cout << std::endl;
 
     std::cout << "VIDEOS CON CALIFICACIÓN MAYOR O IGUAL A " << calificacionMinima << ":" << std::endl;
     bool encontrados = false;
@@ -62,15 +65,43 @@ void Menu::videosGenCalificacionGenero(const std::vector<Video*>& videos)
     }
 }
 
+
+
 void Menu::mostrarEpisodiosSerie(const std::vector<Video*>& videos)
 {
+    string serie;
+    std::cout << "Ingrese el nombre de una serie para mostrar los episodios: ";
+    std::cin.ignore();
+    std::getline(std::cin, serie);
+    std::cout << std::endl;
+
+    std::cout << "Episodios de la serie que solicito " << serie << ":" << std::endl;
+    bool encontrados = false;
+
+    for (Video* video : videos) {
+        if (video->getNombre() == serie) {
+            if (Episodio* episodio = dynamic_cast<Episodio*>(video)) {
+            episodio ->mostrarInfo();
+            std::cout << std::endl;
+            encontrados = true;
+        }
+    }
+    }
+    if (!encontrados) {
+        std::cout << "No se encontraro la serie que usted ingreso." << std::endl;
+    }
+
 }
+
+
 
 void Menu::mostrarPeliculasCalfMayor(const std::vector<Video*>& videos)
 {
     double calificacionMinima;
     std::cout << "Ingrese la calificación mínima: ";
     std::cin >> calificacionMinima;
+    std::cout << std::endl;
+
     //mostrarVideosPorCalificacion(videos, calificacionMinima);
 
     std::cout << "VIDEOS CON CALIFICACIÓN MAYOR O IGUAL A " << calificacionMinima << ":" << std::endl;
@@ -78,12 +109,18 @@ void Menu::mostrarPeliculasCalfMayor(const std::vector<Video*>& videos)
 
     for (Video* video : videos) {
         if (video->getCalificacion() >= calificacionMinima) {
-            if (Episodio* episodio = dynamic_cast<Episodio*>(video)) {
-                episodio->mostrarInfo();}}}
+            if (Pelicula* pelicula = dynamic_cast<Pelicula*>(video)) {
+                pelicula->mostrarInfo();
+                std::cout << std::endl;
+                encontrados = true;
+            }
+        }
+    }
 
     if (!encontrados) {
         std::cout << "No se encontraron Peliculas con esa calificación." << std::endl;
     }
+    
 }
 
 void Menu::CalificarVideo(const std::vector<Video*>& videos)

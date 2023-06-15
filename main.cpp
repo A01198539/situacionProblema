@@ -53,8 +53,7 @@ int main(){
     }
 
     for (Video* video : videos) {
-        delete video;
-    }*/
+        delete video;}*/
      
 
     
