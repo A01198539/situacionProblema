@@ -1,3 +1,8 @@
+/*
+Sebastian Peñafiel A01198539
+Lector de Archivos 
+*/
+
 #ifndef LECTORARCHIVOS_H
 #define LECTORARCHIVOS_H
 

@@ -1,18 +1,19 @@
 #include "Pelicula.h"
 #include <iostream>
 
+//Constructor Vacio
 Pelicula::Pelicula()
 {
 }
-
+//Constructor con propiedades de Video
 Pelicula::Pelicula(string id, string nombre, int duracion, string genero,
-                   double calificacion, string fechaEstreno)
+    double calificacion, string fechaEstreno)
     : Video(id, nombre, duracion, genero, calificacion, fechaEstreno)
 {
 }
 
 
-
+//Metodo para mostrar la informacion si es Pelicula que se sobreescribe 
 void Pelicula::mostrarInfo()
 {
     std::cout << "ID: " << getID() << std::endl;
@@ -23,20 +24,3 @@ void Pelicula::mostrarInfo()
     std::cout << "Fecha de estreno: " << getfechaEstreno() << std::endl;
 }
 
-void Pelicula::mostrarPeliculasporCalificacion(vector<Video *> videos, double calificacionMinima)
-{
-    std::cout << "PELÍCULAS CON CALIFICACIÓN MAYOR O IGUAL A " << calificacionMinima << ":" << std::endl;
-    bool encontradas = false;
-
-    for (const auto& video : videos) {
-        if (dynamic_cast<const Pelicula*>(video) && video->getCalificacion() >= calificacionMinima) {
-            video->mostrarInfo();
-            std::cout << std::endl;
-            encontradas = true;
-        }
-    }
-
-    if (!encontradas) {
-        std::cout << "No se encontraron películas con esa calificación." << std::endl;
-    }
-}

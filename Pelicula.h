@@ -18,7 +18,6 @@ class Pelicula : public Video {
         Pelicula();
         Pelicula(string id, string nombre,int duracion, string genero, double calificacion,
         string fechaEstreno);
-        void mostrarPeliculasporCalificacion(vector<Video *> videos, double calificacionMinima);
 
         void mostrarInfo();
 

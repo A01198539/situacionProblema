@@ -7,17 +7,15 @@ Episodio::Episodio()
 }
 
 Episodio::Episodio(string id, string nombre, int duracion, string genero,
-                   double calificacion, string fechaEstreno, string idEpisodio, string nombreEpisodio,
-                   int temporada, double numeroEpisodio) : Video(id, nombre, duracion,
-                                                                 genero, calificacion, fechaEstreno),
-                                                           idEpisodio(idEpisodio),
-                                                           nombreEpisodio(nombreEpisodio), temporada(temporada), numeroEpisodio(numeroEpisodio)
-{
-}
+                double calificacion, string fechaEstreno, string idEpisodio, string nombreEpisodio,
+                int temporada, double numeroEpisodio) : Video(id, nombre, duracion,
+                genero, calificacion, fechaEstreno),idEpisodio(idEpisodio),
+                nombreEpisodio(nombreEpisodio), temporada(temporada), numeroEpisodio(numeroEpisodio){}
+
 
 void Episodio::mostrarInfo()
 {
-     std::cout << "ID: " << getID() << std::endl;
+    std::cout << "ID: " << getID() << std::endl;
     std::cout << "Nombre: " << getNombre() << std::endl;
     std::cout << "Género: " << getGenero() << std::endl;
     std::cout << "Calificación: " << getCalificacion() << std::endl;
@@ -52,4 +50,10 @@ int Episodio::getTemporada()
 double Episodio::getnumeroEpisodio()
 {
     return numeroEpisodio;
+}
+
+Episodio &Episodio::operator+=(int calificacion)
+{
+    setCalificacion(getCalificacion() + calificacion);
+    return *this;
 }

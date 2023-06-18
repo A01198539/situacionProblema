@@ -16,7 +16,7 @@ class Menu{
 
 private:
 /*Cargar el archivo donde se leen los datos*/
-    void cargarDatos(const std::vector<Video*>& videos);
+    void cargarDatos(std::vector<Video*>& videos);
 
 /*Mostrar los videos en general con Una calificacion mayor o 
 igual a un valor tecleado por el usuario o un genero tecleado por el usuario*/

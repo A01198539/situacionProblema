@@ -1,5 +1,6 @@
 /*
-Autor: Sebatsian Peñafiel A01198539
+Autor: Sebastian Peñafiel A01198539
+Clase Padre Video
 */
 #ifndef VIDEO_H
 #define VIDEO_H
@@ -33,8 +34,8 @@ class Video {
         double getCalificacion();
         int getDuracion();
         string getfechaEstreno();
-
-        virtual void mostrarInfo()=0;
+        void setCalificacion(double nuevaCalificacion);   //setCalificacion para la funcion que califica el video
+        virtual void mostrarInfo()=0;   //Funcion virtual pura, clase abstracta 
         
 
 

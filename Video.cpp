@@ -1,3 +1,7 @@
+/*
+Autor:Sebastian Peñafiel A01198539 
+*/
+
 #include "Video.h"
 #include <iostream>
 using namespace std;
@@ -11,8 +15,8 @@ Video::Video()
 }
 
 Video::Video(string id, string nombre, int duracion, string genero, double calificacion,
-             string fechaEstreno) : ID(id), nombre(nombre), duracion(duracion), genero(genero),
-                                    calificacion(calificacion), fechaEstreno(fechaEstreno)
+             string fechaEstreno) : ID(id), nombre(nombre), duracion(duracion), 
+             genero(genero),calificacion(calificacion), fechaEstreno(fechaEstreno)
 {
 
 }
@@ -48,4 +52,7 @@ string Video::getfechaEstreno()
     return fechaEstreno;
 }
 
-
+void Video::setCalificacion(double nuevaCalificacion)
+{
+    calificacion = nuevaCalificacion;
+}
